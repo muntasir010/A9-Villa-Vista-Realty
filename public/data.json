@@ -2,7 +2,7 @@
     {
         "id": 1,
         "estate_title": "Modern Luxury Villa",
-        "image": "https://example.com/images/villa1.jpg",
+        "image": "https://i.ibb.co/ZHfvzvS/modern-residential-district-with-green-roof-balcony-generated-by-ai.jpg",
         "segment_name": "Luxury Villas",
         "description": "A stunning modern villa with open spaces and premium amenities, perfect for luxurious living.",
         "price": "$1,200,000",
@@ -15,7 +15,7 @@
     {
         "id": 2,
         "estate_title": "Cozy Family Home",
-        "image": "https://example.com/images/home2.jpg",
+        "image": "https://i.ibb.co/n8Rz0ZH/villa-house-model-key-drawing-retro-desktop-real-estate-sale-concept.jpg",
         "segment_name": "Family Homes",
         "description": "A charming family home located in a peaceful neighborhood, ideal for raising a family.",
         "price": "$450,000",
@@ -28,7 +28,7 @@
     {
         "id": 3,
         "estate_title": "Urban Apartment",
-        "image": "https://example.com/images/apartment3.jpg",
+        "image": "https://i.ibb.co/h1XK2Z8/denys-nevozhai-Hhm-CIJTLu-GY-unsplash.jpg",
         "segment_name": "Apartments",
         "description": "A stylish apartment in the heart of the city, close to shops and entertainment hubs.",
         "price": "$2,000/month",
@@ -41,7 +41,7 @@
     {
         "id": 4,
         "estate_title": "Seaside Cottage",
-        "image": "https://example.com/images/cottage4.jpg",
+        "image": "https://i.ibb.co/9NwvBhw/scott-webb-1ddol8rg-UH8-unsplash.jpg",
         "segment_name": "Vacation Homes",
         "description": "A quaint seaside cottage with breathtaking views, perfect for a peaceful getaway.",
         "price": "$750,000",
@@ -54,7 +54,7 @@
     {
         "id": 5,
         "estate_title": "Penthouse Suite",
-        "image": "https://example.com/images/penthouse5.jpg",
+        "image": "https://i.ibb.co/5hRGKhr/3d-electric-car-building.jpg",
         "segment_name": "Luxury Apartments",
         "description": "An exquisite penthouse offering panoramic views and premium lifestyle amenities.",
         "price": "$10,000/month",
@@ -67,7 +67,7 @@
     {
         "id": 6,
         "estate_title": "Suburban Retreat",
-        "image": "https://example.com/images/retreat6.jpg",
+        "image": "https://i.ibb.co/CWQD0Yv/evelyn-paris-XJn-P4-L958ds-unsplash.jpg",
         "segment_name": "Family Homes",
         "description": "A spacious suburban home with a private yard and nearby parks, perfect for families.",
         "price": "$600,000",
@@ -80,7 +80,7 @@
     {
         "id": 7,
         "estate_title": "Mountain Cabin",
-        "image": "https://example.com/images/cabin7.jpg",
+        "image": "https://i.ibb.co/wz10Wf3/nathan-walker-Sv4btqhc-Yqw-unsplash.jpg",
         "segment_name": "Vacation Homes",
         "description": "A rustic mountain cabin with stunning views, perfect for nature lovers.",
         "price": "$400,000",
@@ -93,7 +93,7 @@
     {
         "id": 8,
         "estate_title": "Eco-Friendly House",
-        "image": "https://example.com/images/eco8.jpg",
+        "image": "https://i.ibb.co/kQ1Fv23/jessica-furtney-YOouc-EImr-Kw-unsplash.jpg",
         "segment_name": "Eco Homes",
         "description": "A sustainable home with solar panels and green living features, designed for environmentally conscious residents.",
         "price": "$700,000",
@@ -106,7 +106,7 @@
     {
         "id": 9,
         "estate_title": "City Studio Apartment",
-        "image": "https://example.com/images/studio9.jpg",
+        "image": "https://i.ibb.co/k3pw12b/travel-cents-WYLu-NY5-JG4-E-unsplash.jpg",
         "segment_name": "Compact Apartments",
         "description": "A modern studio apartment in the city center, ideal for singles or couples.",
         "price": "$1,500/month",

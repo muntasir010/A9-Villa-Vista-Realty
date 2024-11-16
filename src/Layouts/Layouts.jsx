@@ -7,7 +7,6 @@ const Layouts = () => {
     return (
         <div className="max-w-7xl mx-auto">
             <Navbar></Navbar>
-            <Home></Home>
             <Outlet></Outlet>
             <Footer></Footer>
         </div>
