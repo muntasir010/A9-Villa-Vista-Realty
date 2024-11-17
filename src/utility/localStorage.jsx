@@ -1,18 +1,19 @@
-// const getStoredJobApplication = () =>{
-//     const storedJObApplication = localStorage.getItem('job-applications');
-//     if (storedJObApplication) {
-//         return JSON.parse(storedJObApplication);
-//     }
-//     return [];
-// }
+const getStoredResidential = () => {
+    const storedResidential = localStorage.getItem('residential-apply');
+    if (storedResidential) {
+        return JSON.parse(storedResidential);
+    }
+    return [];
+}
 
-// const saveJobApplication = (id) =>{
-//     const storedJObApplication = getStoredJobApplication();
-//     const exists = storedJObApplication.find(jobId => jobId === id);
-//     if(!exists){
-//         storedJObApplication.push(id);
-//         localStorage.setItem('job-applications', JSON.stringify(storedJObApplication));
-//     }
-// }
 
-// export {getStoredJobApplication, saveJobApplication};
+const saveResidential = (id) => {
+    const storedResidential = getStoredResidential();
+    const exists = storedResidential.find(residentialId => residentialId === id);
+    if (!exists) {
+        storedResidential.push(id);
+        localStorage.setItem('residential-apply', JSON.stringify(storedResidential));
+    }
+}
+
+export { getStoredResidential, saveResidential };
