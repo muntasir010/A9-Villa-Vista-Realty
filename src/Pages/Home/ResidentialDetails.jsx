@@ -3,6 +3,7 @@ import { MdLocationOn } from "react-icons/md";
 import { useLoaderData, useParams } from "react-router-dom";
 import { saveResidential } from "../../utility/localStorage";
 import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const ResidentialDetails = () => {
     const residence = useLoaderData();
@@ -41,7 +42,7 @@ const ResidentialDetails = () => {
                 <div>
                     <button onClick={handleApplyResidential}
                         className="btn btn-outline  w-full mt-4 text-xl text-orange-400">Add Residential</button>
-                    <ToastContainer className='text-green-700 text-center text-xl mt-3'/>
+                    <ToastContainer/>
                 </div>
             </div>
         </div>
