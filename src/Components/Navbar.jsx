@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/'>Residential Details</NavLink></li>
+        <li><NavLink to='/appliedResidential'>Applied Residential</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100 my-6">
@@ -32,7 +32,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <Link to='/'><img className="w-10" src="https://i.ibb.co/khnYWJn/rental.png" alt="" /></Link>
-                <Link to='/'><a className="btn btn-ghost text-3xl">VillaVistaRealty</a></Link>
+                <Link to='/'><a className="btn btn-ghost text-3xl text-orange-400">VillaVistaRealty</a></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

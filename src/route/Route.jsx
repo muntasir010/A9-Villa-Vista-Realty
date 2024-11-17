@@ -4,6 +4,7 @@ import Layouts from "../Layouts/Layouts";
 import Home from "../Pages/Home/Home";
 import Residential from "../Components/Residential/Residential";
 import ResidentialDetails from "../Pages/Home/ResidentialDetails";
+import AppliedResidential from "../Pages/AppliedResidential";
 
 export const router = createBrowserRouter([
    { 
@@ -22,6 +23,11 @@ export const router = createBrowserRouter([
         {
             path: '/residential/:id',
             element: <ResidentialDetails></ResidentialDetails>,
+            loader: () => fetch('/public/data.json')
+        },
+        {
+            path: '/appliedResidential',
+            element: <AppliedResidential></AppliedResidential>,
             loader: () => fetch('/public/data.json')
         },
     ]
