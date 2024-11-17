@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import Residential from "./Residential";
+import Residential from "./Residential";
 
 const Residence = () => {
     const [residence, setResidence] = useState([]);
@@ -17,7 +17,7 @@ const Residence = () => {
                 <h2 className='text-4xl font-semibold'> Properties for Sell and Rent</h2>
                 <p>These are the latest properties in the Sales category. You can create the list using the “latest listing shortcode” and show items by specific categories.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
                 {
                     residence.map(residential => 
                     <Residential 
