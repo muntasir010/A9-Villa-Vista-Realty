@@ -5,6 +5,8 @@ import Home from "../Pages/Home/Home";
 import Residential from "../Components/Residential/Residential";
 import ResidentialDetails from "../Pages/Home/ResidentialDetails";
 import AppliedResidential from "../Pages/AppliedResidential";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
 
 export const router = createBrowserRouter([
    { 
@@ -29,6 +31,14 @@ export const router = createBrowserRouter([
             path: '/appliedResidential',
             element: <AppliedResidential></AppliedResidential>,
             loader: () => fetch('/public/data.json')
+        },
+        {
+            path: '/login',
+            element: <Login></Login>
+        },
+        {
+            path: '/register',
+            element: <Register></Register>
         },
     ]
    }
