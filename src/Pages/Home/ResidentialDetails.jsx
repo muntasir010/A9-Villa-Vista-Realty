@@ -21,7 +21,7 @@ const ResidentialDetails = () => {
             <h1 className="text-center text-4xl font-bold my-5 text-orange-400">Residential Details</h1>
             <div className="rounded-xl border my-10 space-y-4 p-4">
                 <h3 className="text-3xl font-bold text-center my-3">{estate_title}</h3>
-                <img className="rounded-xl" src={image} alt="" />
+                <img className="rounded-xl h-fit" src={image} alt="" />
                 <div className="flex md:text-xl font-medium justify-between px-4">
                     <p className="flex gap-2 items-center"><span><MdLocationOn></MdLocationOn></span>{location}</p>
                     <p className="flex gap-2 items-center">{segment_name}</p>

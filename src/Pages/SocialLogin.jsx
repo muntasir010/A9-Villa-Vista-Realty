@@ -1,9 +1,22 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SocialLogin = () => {
     const {googleLogin, githubLogin} = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state || '/';
+
+    const handleSocialLogin = socialProvider =>{
+        socialProvider()
+        .then(result => {
+            if(result.user){
+               navigate(from)
+            }
+        })
+    }
 
     return (
         <div>
@@ -14,8 +27,8 @@ const SocialLogin = () => {
             </div>
 
             <div className="flex w-10 my-5 mx-auto text-2xl gap-5">
-                <button onClick={()=>googleLogin()}><FaGoogle></FaGoogle></button>
-                <button onClick={()=>githubLogin()}><FaGithub></FaGithub></button>
+                <button onClick={()=>handleSocialLogin(googleLogin)}><FaGoogle></FaGoogle></button>
+                <button onClick={()=>handleSocialLogin(githubLogin)}><FaGithub></FaGithub></button>
             </div>
         </div>
     );

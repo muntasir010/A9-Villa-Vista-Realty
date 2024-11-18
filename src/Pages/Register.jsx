@@ -1,21 +1,25 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state || '/';
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = (data) => {
         const { email, password } = data
-        console.log(data)
         createUser(email, password)
-            .then(result => {
-                console.log(result);
-            })
+        .then(result => {
+            if(result.user){
+               navigate(from)
+            }
+        })
     }
     return (
         <div className="card md:w-1/2 mx-auto my-10 shrink-0 shadow-xl">
