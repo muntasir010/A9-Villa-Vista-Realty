@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
 
 const Register = () => {
@@ -17,7 +18,7 @@ const Register = () => {
             })
     }
     return (
-        <div className="card bg-base-100 w-full max-w-sm mx-auto shrink-0 shadow-2xl">
+        <div className="card md:w-1/2 mx-auto my-10 shrink-0 shadow-xl">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                 {/* name */}
                 <div className="form-control">
@@ -60,6 +61,7 @@ const Register = () => {
                     <button className="btn btn-outline">Sign Up</button>
                 </div>
             </form>
+            <p className="text-center mb-4">You have an account? <Link to='/login' className="font-bold uppercase text-blue-700">Login</Link></p>
         </div>
     )
 };
