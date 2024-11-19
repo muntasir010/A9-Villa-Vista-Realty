@@ -4,6 +4,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { saveResidential } from "../../utility/localStorage";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 const ResidentialDetails = () => {
     const residence = useLoaderData();
@@ -18,6 +19,9 @@ const ResidentialDetails = () => {
     }
     return (
         <div className="max-w-3xl mx-auto ">
+            <Helmet>
+                <title>Villa Vista Realty | Residential Details</title>
+            </Helmet>
             <h1 className="text-center text-4xl font-bold my-5 text-orange-400">Residential Details</h1>
             <div className="rounded-xl border my-10 space-y-4 p-4">
                 <h3 className="text-3xl font-bold text-center my-3">{estate_title}</h3>
@@ -42,7 +46,7 @@ const ResidentialDetails = () => {
                 <div>
                     <button onClick={handleApplyResidential}
                         className="btn btn-outline  w-full mt-4 text-xl text-orange-400">Add Residential</button>
-                    <ToastContainer/>
+                    <ToastContainer />
                 </div>
             </div>
         </div>

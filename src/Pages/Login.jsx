@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import PasswordReset from "../Components/PasswordReset/PasswordReset";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const { signInUser } = useContext(AuthContext);
@@ -29,36 +30,41 @@ const Login = () => {
 
 
     return (
-        <div className="card md:w-1/2 mx-auto my-10 shrink-0 shadow-xl">
-            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-                <div className="form-control">
-                    <label className="label">
-                        <span className="label-text">Email</span>
-                    </label>
-                    <input type="email" placeholder="email" className="input input-bordered"
-                        {...register("email", { required: true })}
-                    />
-                    {errors.email && <span className='text-red-600'>This field is required</span>}
-                </div>
+        <div>
+            <Helmet>
+                <title>Villa Vista Realty | Login page</title>
+            </Helmet>
+            <div className="card md:w-1/2 mx-auto my-10 shrink-0 shadow-xl">
+                <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Email</span>
+                        </label>
+                        <input type="email" placeholder="email" className="input input-bordered"
+                            {...register("email", { required: true })}
+                        />
+                        {errors.email && <span className='text-red-600'>This field is required</span>}
+                    </div>
 
 
-                <div className="form-control">
-                    <label className="label">
-                        <span className="label-text">Password</span>
-                    </label>
-                    <input type="password" placeholder="password" className="input input-bordered"
-                        {...register("password", { required: true })}
-                    />
-                    {errors.password && <span className='text-red-600'>This field is required</span>}
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Password</span>
+                        </label>
+                        <input type="password" placeholder="password" className="input input-bordered"
+                            {...register("password", { required: true })}
+                        />
+                        {errors.password && <span className='text-red-600'>This field is required</span>}
 
-                    <PasswordReset />
-                </div>
-                <div className="form-control mt-6">
-                    <button className="btn btn-primary">Login</button>
-                </div>
-            </form>
-            <SocialLogin></SocialLogin>
-            <p className="text-center mb-4">Don't have an account? <Link to='/register' className="font-bold uppercase text-blue-700">Sign up</Link></p>
+                        <PasswordReset />
+                    </div>
+                    <div className="form-control mt-6">
+                        <button className="btn btn-primary">Login</button>
+                    </div>
+                </form>
+                <SocialLogin></SocialLogin>
+                <p className="text-center mb-4">Don't have an account? <Link to='/register' className="font-bold uppercase text-blue-700">Sign up</Link></p>
+            </div>
         </div>
     );
 };

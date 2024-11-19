@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredResidential } from "../utility/localStorage";
 import { FaDove } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const AppliedResidential = () => {
     const residential = useLoaderData();
@@ -24,6 +25,9 @@ const AppliedResidential = () => {
     }, [])
     return (
         <div className="h-screen">
+            <Helmet>
+                <title>Villa Vista Realty | Applied Residential</title>
+            </Helmet>
             <ul className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {
                     appliedResidential.map(resident => <li key={resident.id}>
