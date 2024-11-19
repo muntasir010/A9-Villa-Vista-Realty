@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
-    const {user, logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
@@ -36,7 +36,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <Link to='/'><img className="w-10" src="https://i.ibb.co/khnYWJn/rental.png" alt="" /></Link>
-                <Link to='/'><a className="btn btn-ghost text-3xl text-orange-400">VillaVistaRealty</a></Link>
+                <Link to='/'><h2 className="btn btn-ghost text-3xl text-orange-400">VillaVistaRealty</h2></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -50,13 +50,12 @@ const Navbar = () => {
                     user ? <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
-                                <img src={user.photoURL} alt={user.displayName} />
+                                <img src={user?.photoURL || "https://i.ibb.co/DtS7shN/aiony-haust-3-TLl-97-HNJo-unsplash.jpg"} />
                             </div>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             <li>
-                                <button className="btn btn-sm  btn-ghost">{user.displayName}</button>
-
+                                <button className="btn btn-sm  btn-ghost">{user?.displayName||'user name not found'}</button>
                             </li>
                             <li>
                                 <button className="btn btn-sm  btn-ghost"

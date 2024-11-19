@@ -3,6 +3,7 @@ import SocialLogin from "./SocialLogin";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
+import PasswordReset from "../Components/PasswordReset/PasswordReset";
 
 const Login = () => {
     const { signInUser } = useContext(AuthContext);
@@ -16,14 +17,14 @@ const Login = () => {
         formState: { errors },
     } = useForm();
 
-    const onSubmit =(data) =>{
-        const {email, password} = data;
+    const onSubmit = (data) => {
+        const { email, password } = data;
         signInUser(email, password)
-        .then(result => {
-            if(result.user){
-               navigate(from)
-            }
-        })
+            .then(result => {
+                if (result.user) {
+                    navigate(from)
+                }
+            })
     }
 
 
@@ -50,16 +51,14 @@ const Login = () => {
                     />
                     {errors.password && <span className='text-red-600'>This field is required</span>}
 
-                    <label className="label">
-                        <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                    </label>
+                    <PasswordReset />
                 </div>
                 <div className="form-control mt-6">
                     <button className="btn btn-primary">Login</button>
                 </div>
             </form>
             <SocialLogin></SocialLogin>
-                <p className="text-center mb-4">Don't have an account? <Link to='/register' className="font-bold uppercase text-blue-700">Sign up</Link></p>
+            <p className="text-center mb-4">Don't have an account? <Link to='/register' className="font-bold uppercase text-blue-700">Sign up</Link></p>
         </div>
     );
 };
