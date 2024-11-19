@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredResidential } from "../utility/localStorage";
-import { FaDove } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 
 const AppliedResidential = () => {

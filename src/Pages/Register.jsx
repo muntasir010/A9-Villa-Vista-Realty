@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
@@ -7,6 +7,10 @@ import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
+    const [signUpError, setSignUpError] = useState('');
+    const [success, setSuccess] = useState('');
+
+
     const navigate = useNavigate();
     const from = "/";
 
@@ -18,12 +22,26 @@ const Register = () => {
         //create user and update profile
         createUser(email, password)
             .then(() => {
+                setSignUpError('');
+                setSuccess('')
+
+                if (password.length < 6) {
+                    setSignUpError('Password should be at least 6 characters or longer')
+                    return;
+                }
+                else if (!/[A-Z]/.test(password)) {
+                    setSignUpError('Your password should have at least one uppercase characters');
+                    return;
+                }
+               
                 updateUserProfile(fullName, image)
                     .then(() => {
                         navigate(from);
                     });
+
             });
     };
+
     return (
         <div>
             <Helmet>
@@ -72,6 +90,12 @@ const Register = () => {
                         <button className="btn btn-outline">Sign Up</button>
                     </div>
                 </form>
+                {
+                    signUpError && <p className="text-red-700">{signUpError}</p>
+                }
+                {
+                    success && <p className="text-green-700">{success}</p>
+                }
                 <p className="text-center mb-4">You have an account? <Link to='/login' className="font-bold uppercase text-blue-700">Login</Link></p>
             </div>
         </div>
